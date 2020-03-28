@@ -25,7 +25,7 @@ function buildTable(data) {
 
 // Function to filter table on button click
 function handleClick() {
-    // Grab the datetime value from the filter
+    // Grab the value from the filters
     let date = d3.select("#datetime").property("value");
     let city = d3.select("#cityInput").property("value");
     let state = d3.select("#stateInput").property("value");
