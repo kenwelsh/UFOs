@@ -10,3 +10,7 @@ body {
     text-align: center;
 }
 
+input::placeholder {
+    color: rgb(180, 39, 39);
+    opacity: 0.6;
+  }
