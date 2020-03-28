@@ -13,16 +13,16 @@
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 
-<body>
+<body class="bg-dark">
     <div class="wrapper">
         <!-- Add Nav bar -->
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
             <a class="navbar-brand" href="index.html">UFO Sightings</a>
         </nav>
         
         <!-- Add Jumbotron header under Nav bar -->
         <div class="jumbotron">
-            <h1>The Truth Is Out There</h1>
+            <h1 class="display-4">The Truth Is Out There</h1>
         </div>
 
         <!-- Add Article Section -->
@@ -56,21 +56,45 @@
                 
                 <!-- Add Table Filter -->
                 <div class="col-md-3">
-                    <form>
+                    <form class="bg-dark">
                         <!-- Title -->
                         <p>Filter Search</p>
                         
                         <!-- List group for input and button -->
-                        <ul class="list-group">
+                        <ul class="list-group bg-dark">
                             <!-- Date input box -->
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-dark">
                                 <label for="date">Enter Date</label>
-                                <input type="text" placeholder="1/10/2010" id="datetime" />
+                                <input type="text" placeholder="1/10/2010" id="datetime" style="float:right"/>
+                            </li>
+
+                            <!-- City input box -->
+                            <li class="list-group-item bg-dark">
+                                <label for="cityFilter">Enter City</label>
+                                <input type="text" placeholder="fresno" id="cityInput" style="float:right"/>
+                            </li>
+
+                            <!-- State input box -->
+                            <li class="list-group-item bg-dark">
+                                <label for="stateFilter">Enter State</label>
+                                <input type="text" placeholder="ca" id="stateInput" style="float:right"/>
+                            </li>
+
+                            <!-- Country input box -->
+                            <li class="list-group-item bg-dark">
+                                <label for="countryFilter">Enter Country</label>
+                                <input type="text" placeholder="us" id="countryInput" style="float:right"/>
+                            </li>
+
+                            <!-- Shape input box -->
+                            <li class="list-group-item bg-dark">
+                                <label for="shapeFilter">Enter Shape</label>
+                                <input type="text" placeholder="circle" id="shapeInput" style="float:right"/>
                             </li>
 
                             <!-- Filter button -->
-                            <li class="list-group-item">
-                                <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                            <li class="list-group-item bg-dark" style = "margin-left: 33%;">
+                                <button id="filter-btn" type="button" class="btn btn-secondary">Filter Table</button>
                             </li>
                         </ul>
                     </form>
@@ -98,9 +122,12 @@
 
             </div>
         </div>
-
-
-	</div>   
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app.js"></script>
+    
 </body>
 </html>
 

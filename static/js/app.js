@@ -27,17 +27,33 @@ function buildTable(data) {
 function handleClick() {
     // Grab the datetime value from the filter
     let date = d3.select("#datetime").property("value");
+    let city = d3.select("#cityInput").property("value");
+    let state = d3.select("#stateInput").property("value");
+    let country = d3.select("#countryInput").property("value");
+    let shape = d3.select("#shapeInput").property("value");
     let filteredData = tableData;
-    // Check to see if a date was entered and filter the
-    // data using that date.
+    
+    // cycle through filters
     if (date) {
-      // Apply `filter` to the table data to only keep the
-      // rows where the `datetime` value matches the filter value
       filteredData = filteredData.filter(row => row.datetime === date);
     };
-    // Rebuild the table using the filtered data
-    // @NOTE: If no date was entered, then filteredData will
-    // just be the original tableData.
+
+    if (city) {
+      filteredData = filteredData.filter(row => row.city === city);
+    };
+
+    if (state) {
+      filteredData = filteredData.filter(row => row.state === state);
+    };
+
+    if (country) {
+      filteredData = filteredData.filter(row => row.country === country);
+    };
+
+    if (shape) {
+      filteredData = filteredData.filter(row => row.shape === shape);
+    };
+    
     buildTable(filteredData);
 };
 
